@@ -16,6 +16,8 @@ def readCSV(filename):
   dataheaders = pandas.read_csv(filename, nrows=1)
   #Read the csv with only those headers
   data = pandas.read_csv(filename, header=None, skiprows=1, usecols=[1,2,3,5])
+  #Convert the data to a regular array
+  data = data.to_numpy()
   #Reorder to x-y-frame-int for consistency
   data = data[:,[1,2,0,3]]
   return data
