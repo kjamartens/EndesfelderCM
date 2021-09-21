@@ -1,8 +1,8 @@
 # Main import module
-def mainImport:
-  import pandas
-  import numpy as np
-  from scipy.spatial import distance
+#def mainImport:
+#  import pandas
+#  import numpy as np
+#  from scipy.spatial import distance
 
 # Functions to read datafiles:
 # Output will always be an array with columns x - y - frame - intensity
