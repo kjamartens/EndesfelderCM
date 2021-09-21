@@ -5,7 +5,7 @@
 #  from scipy.spatial import distance
 
 # Functions to read datafiles:
-# Output will always be an array with columns x - y - frame - intensity
+# Output will always be an array with columns frame - x - y - intensity
 # Input can be ThunderSTORM file (readCSV) or rapidSTORM file (readTXT)
 def readCSV(filename):
   import pandas
@@ -18,8 +18,8 @@ def readCSV(filename):
   data = pandas.read_csv(filename, header=None, skiprows=1, usecols=[1,2,3,5])
   #Convert the data to a regular array
   data = data.to_numpy()
-  #Reorder to x-y-frame-int for consistency
-  data = data[:,[1,2,0,3]]
+  #Reorder to frame-x-y-frame-int for consistency
+  data = data[:,[0,1,2,3]]
   return data
 
 def readTXT(filename):
@@ -28,6 +28,6 @@ def readTXT(filename):
   data = pandas.read_csv(filename, header=None, skiprows=1, sep=" ", usecols=[0,1,2,3])
   #Convert the data to a regular array
   data = data.to_numpy()
-  #Reorder to x-y-frame-int for consistency
-  data = data[:,[0,1,2,3]]
+  #Reorder to frame-x-y-int for consistency
+  data = data[:,[1,2,0,3]]
   return data
