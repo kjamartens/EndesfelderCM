@@ -31,3 +31,10 @@ def readTXT(filename):
   #Reorder to frame-x-y-int for consistency
   data = data[:,[1,2,0,3]]
   return data
+
+def progress_bar(iterated_object, progressbar_len=50):
+    progress = (i+1)/len(iterated_object)
+    block = int(progressbar_len*progress)
+    clear_output(wait=True)
+    text = "Progress: [{0}] {1:.1f}%".format( "#" * block + "-" * (progressbar_len - block), progress * 100)
+    print(text)
