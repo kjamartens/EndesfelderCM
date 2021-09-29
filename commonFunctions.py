@@ -12,14 +12,10 @@ def readCSV(filename):
   #Determine which fields we want to read
   fields = ['x [nm]', 'y [nm]','frame', 'intensity [photon]']
 
-  #Find those headers
-  dataheaders = pandas.read_csv(filename, nrows=1)
-  #Read the csv with only those headers
-  data = pandas.read_csv(filename, header=None, skiprows=1, usecols=[1,2,3,5])
+  #Read the csv with only specific headers
+  data = pandas.read_csv(filename, usecols=['frame','x [nm]','y [nm]','intensity [photon]'])
   #Convert the data to a regular array
   data = data.to_numpy()
-  #Reorder to frame-x-y-int for consistency
-  data = data[:,[0,1,2,3]]
   return data
 
 def readTXT(filename):
