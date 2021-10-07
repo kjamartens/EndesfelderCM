@@ -1,15 +1,13 @@
 # Main import module
-!pip install -U scikit-image
 import numpy as np # Used in modules 1, 2, 3, 4a, 4b, 5, 6, 7, 8, 9a, 9b
 import pandas as pd # Used in modules 4a, 4b, 5, 6, 7, 8, 9a, 9b
 import matplotlib.pyplot as plt # Used in modules 1, 2, 4a, 4b, 5, 6, 7, 8, 9a, 9b  
 from sklearn.neighbors import NearestNeighbors # Used in modules 3, 4a, 7, 8, 9b
 import sys # Used in module 4a
 from IPython.display import clear_output # Used in modules 4a, 4b, 6, 9b
-from skimage.registration import phase_cross_correlation # Used in module 4b
 from scipy.interpolate import interp1d # Used in module 4b
 import cv2 # Used in modules 2, 5
-import scipy.io # Used in modules 1, 2, 5
+from scipy import io # Used in modules 1, 2, 5
 from scipy.signal import convolve2d # Used in module 6
 from scipy.spatial import distance # Used in module 3, 7
 from scipy.optimize import curve_fit # Used in modules 7, 9b
