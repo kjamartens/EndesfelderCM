@@ -7,7 +7,8 @@ import sys # Used in module 4a
 from IPython.display import clear_output # Used in modules 4a, 4b, 6, 9b
 from scipy.interpolate import interp1d # Used in module 4b
 import cv2 # Used in modules 2, 5
-from scipy import io # Used in modules 1, 2, 5
+from scipy.io import loadmat # Used in modules 5
+from skimage import io # Used in modules 1, 2
 from scipy.signal import convolve2d # Used in module 6
 from scipy.spatial import distance # Used in module 3, 7
 from scipy.optimize import curve_fit # Used in modules 7, 9b
