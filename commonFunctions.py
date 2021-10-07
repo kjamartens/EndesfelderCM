@@ -1,4 +1,5 @@
 # Main import module
+!pip install -U scikit-image
 import numpy as np # Used in modules 1, 2, 3, 4a, 4b, 5, 6, 7, 8, 9a, 9b
 import pandas as pd # Used in modules 4a, 4b, 5, 6, 7, 8, 9a, 9b
 import matplotlib.pyplot as plt # Used in modules 1, 2, 4a, 4b, 5, 6, 7, 8, 9a, 9b  
